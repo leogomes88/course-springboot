@@ -7,11 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_user")
-public class User implements Serializable{	
+public class Usuario implements Serializable{	
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -23,10 +21,10 @@ public class User implements Serializable{
 	private String phone;
 	private String password;
 	
-	public User() {		
+	public Usuario() {		
 	}
 
-	public User(Long id, String name, String email, String phone, String password) {		
+	public Usuario(Long id, String name, String email, String phone, String password) {		
 		this.id = id;
 		this.name = name;
 		this.email = email;
@@ -87,7 +85,7 @@ public class User implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		Usuario other = (Usuario) obj;
 		return id == other.id;
 	}	
 }
